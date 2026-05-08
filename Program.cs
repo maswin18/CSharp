@@ -1,13 +1,10 @@
-﻿Console.WriteLine("Enter your age:");
-string? input = Console.ReadLine();
+﻿List<string> employees = new List<string>();
 
-int age = Convert.ToInt32(input);
+employees.Add("Maswin");
+employees.Add("John");
+employees.Add("Sarah");
 
-if (age >= 18)
+foreach (string employee in employees)
 {
-    Console.WriteLine("adult");
-}
-else
-{
-    Console.WriteLine("Underage");
+    Console.WriteLine(employee);
 }
