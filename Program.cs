@@ -4,7 +4,7 @@ Console.WriteLine($"Name: {employee.Name}");
 Console.WriteLine($"Age: {employee.Age}");
 employee.Introduce();
 
-Product product = new Product("Keyboard", 49.99f);
+Product product = new Product("Keyboard", 49.99m);
 
 Console.WriteLine($"Product: {product.Name}");
 Console.WriteLine($"Price: {product.Price}");
@@ -31,9 +31,9 @@ class Product
 {
     public string? Name { get; set; }
 
-    public float Price { get; set; }
+    public decimal Price { get; set; }
 
-    public Product(string name, float price)
+    public Product(string name, decimal price)
     {
         Name = name;
         Price = price;
