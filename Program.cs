@@ -1,10 +1,7 @@
-﻿List<string> employees = new List<string>();
+﻿SayHello("Maswin");
+SayHello("John");
 
-employees.Add("Maswin");
-employees.Add("John");
-employees.Add("Sarah");
-
-foreach (string employee in employees)
+void SayHello(string name)
 {
-    Console.WriteLine(employee);
+    Console.WriteLine($"Hello {name}");
 }
