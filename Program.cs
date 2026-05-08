@@ -1,16 +1,23 @@
-﻿SayHello("Maswin");
-SayHello("John");
+﻿Employee employee = new Employee("Maswin", 30);
 
-void SayHello(string name)
+Console.WriteLine($"Name: {employee.Name}");
+Console.WriteLine($"Age: {employee.Age}");
+employee.Introduce();
+
+class Employee
 {
-    Console.WriteLine($"Hello {name}");
+    public string? Name { get; set; }
+
+    public int Age { get; set; }
+
+    public Employee(string name, int age)
+    {
+        Name = name;
+        Age = age;
+    }
+
+    public void Introduce()
+    {
+        Console.WriteLine($"Hello my name is {Name}");
+    }
 }
-
-int AddNumbers(int firstNumber, int secondNumber)
-{
-    return firstNumber + secondNumber;
-}
-
-int result = AddNumbers(10, 20);
-
-Console.WriteLine($"Output: {result}");
