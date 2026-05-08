@@ -1,13 +1,8 @@
-﻿string firstName = "Maswin";
-string lastName = "Putra";
+﻿Console.WriteLine("Enter your name:");
+string? name = Console.ReadLine();
 
-int age = 42;
-double height = 178;
+Console.WriteLine("Enter your age:");
+string? age = Console.ReadLine();
 
-bool isWorking = true;
-
-Console.WriteLine($"First Name: {firstName}");
-Console.WriteLine($"Last Name: {lastName}");
+Console.WriteLine($"Name: {name}");
 Console.WriteLine($"Age: {age}");
-Console.WriteLine($"Height: {height}");
-Console.WriteLine($"Working Status: {isWorking}");
