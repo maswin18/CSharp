@@ -1,17 +1,12 @@
 namespace CSharp.Models;
 
-public class Employee
+public class Employee : Person
 {
-    public string? Name {get; set;}
-    public int Age {get;set;}
-    public Employee(string name, int age)
+    public string? Department {get;set;}
+    public Employee(string name, int age, string department)
     {
         Name = name;
         Age = age;
-    }
-
-    public void Introduce()
-    {
-        Console.WriteLine($"Hello my name is {Name}");
+        Department = department;
     }
 }

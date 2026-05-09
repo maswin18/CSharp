@@ -1,13 +1,16 @@
 ﻿using CSharp.Models;
 
-Employee employee = new Employee("Maswin", 42);
+Employee employee = new Employee("Maswin", 42, "IT");
 
-Console.WriteLine($"Name: {employee.Name}");
-Console.WriteLine($"Age: {employee.Age}");
+Console.WriteLine($"Employee: {employee.Name}");
+Console.WriteLine($"Department: {employee.Department}");
 
 employee.Introduce();
 
-Product product = new Product("Keyboard", 49.99m);
+Console.WriteLine();
 
-Console.WriteLine($"Name: {product.Name}");
-Console.WriteLine($"Price: {product.Price}");
+Customer customer = new Customer("John", 40, "john@email.com");
+
+Console.WriteLine($"Customer: {customer.Name}");
+Console.WriteLine($"Email: {customer.Email}");
+
