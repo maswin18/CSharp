@@ -1,11 +1,18 @@
-﻿using CSharp.Models;
+﻿try
+{
+    Console.WriteLine("Enter number:");
 
-Employee employee = new Employee("Maswin", 42, "IT");
+    string? input = Console.ReadLine();
 
-employee.PrintInfo();
+    int number = Convert.ToInt32(input);
 
-Console.WriteLine();
-
-Customer customer = new Customer("John", 40, "john@email.com");
-
-customer.PrintInfo();
+    Console.WriteLine($"Number: {number}");
+}
+catch (FormatException ex)
+{
+    Console.WriteLine(ex.Message);
+}
+finally
+{
+    Console.WriteLine("Program finished");
+}
