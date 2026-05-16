@@ -1,18 +1,49 @@
-﻿try
+﻿using CSharp.Models;
+
+List<Employee> employees = new List<Employee>()
 {
-    Console.WriteLine("Enter number:");
+    new Employee("Maswin", 30, "IT"),
+    new Employee("John", 40, "HR"),
+    new Employee("Sarah", 25, "IT"),
+    new Employee("Michael", 35, "Finance")
+};
 
-    string? input = Console.ReadLine();
+/*List<Employee> itEmployees = employees
+    .Where(employee => employee.Department == "IT")
+    .ToList();
 
-    int number = Convert.ToInt32(input);
-
-    Console.WriteLine($"Number: {number}");
+foreach(Employee employee in itEmployees)
+{
+    Console.WriteLine(employee.Name);
 }
-catch (FormatException ex)
+
+
+List<Employee> orderEmployees = employees
+    .OrderBy(employee => employee.Age)
+    .ToList();
+
+foreach (Employee employee in orderEmployees)
 {
-    Console.WriteLine(ex.Message);
+    Console.WriteLine($"{employee.Name} - {employee.Age}");
 }
-finally
+
+
+List<string?> names = employees
+    .Select(employee => employee.Name)
+    .ToList();
+
+foreach (string? name in names)
 {
-    Console.WriteLine("Program finished");
+    Console.WriteLine(name);
+}
+
+*/
+
+Employee? employee = employees
+    .FirstOrDefault(employee => employee.Name == "Sarah");
+
+if (employee != null)
+{
+    Console.WriteLine(employee.Name);
+    Console.WriteLine(employee.Department);
 }
