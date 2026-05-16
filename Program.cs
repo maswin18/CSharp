@@ -1,10 +1,24 @@
-﻿string result = await GetMessage();
+﻿using System.Text.Json;
+using System.Text.Json.Serialization;
+using CSharp.Models;
 
-Console.WriteLine(result);
+/*
+Employee employee = new Employee(
+    "Maswin",
+    30,
+    "IT"
+);
 
-async Task<string> GetMessage()
-{
-    await Task.Delay(2000);
+string json = JsonSerializer.Serialize(employee);
 
-    return "Hello from async method";
-}
+File.WriteAllText("employee.json", json);
+
+Console.WriteLine("File saved");
+*/
+
+string json = File.ReadAllText("employee.json");
+
+Employee? employee = JsonSerializer.Deserialize<Employee>(json);
+
+Console.WriteLine(employee?.Name);
+Console.WriteLine(employee?.Department);
